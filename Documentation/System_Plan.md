@@ -1,3 +1,3 @@
 ### System Plan
 
-### I'm planning to make an app that contains cars, and has functions connected to vehicles. It will store all the added (created) vehicles, will have such data for each car like brand, plate number, type (Diesel, Benzin, Electric, Hybrid. I will be able to get the datas, and get a single car with a statement.
+### Computer configurer. Can pick the parts in a form that you want, compatibility will be checked, for example an LGA 1155 socket processor can only fit in the same socket motherboard, or a motherboard can handle DDR4 and DDR3 RAM or only DDR3. The GPU requires a 700W PSU or only a 400W. 
