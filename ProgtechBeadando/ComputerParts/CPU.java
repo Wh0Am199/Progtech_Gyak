@@ -25,4 +25,10 @@ public class CPU {
         this.cpuSocket = cpuSocket;
     }
     
+    
+    public CPU(int cores, CpuSocket cpuSocket){
+        this.cores=cores;
+        this.cpuSocket=cpuSocket;
+    }
+    
 }
