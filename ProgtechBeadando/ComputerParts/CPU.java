@@ -11,7 +11,7 @@ public class CPU {
     public int getCores(){
         return cores;
     }
-    public void setCores(){
+    public void setCores(int cores){
         this.cores = cores;
     }
     
@@ -21,7 +21,7 @@ public class CPU {
     public CpuSocket getCpuSocket(){
         return cpuSocket;
     }
-    public void setCpuSocket(){
+    public void setCpuSocket(CpuSocket cpuSocket){
         this.cpuSocket = cpuSocket;
     }
     

@@ -11,7 +11,7 @@ public class RAM {
     public RamType getRamType(){
         return ramType;
     }
-    public void setRamType(){
+    public void setRamType(RamType ramType){
         this.ramType = ramType;
     }
     
@@ -21,7 +21,7 @@ public class RAM {
     public int getSize(){
         return size;
     }
-    public void setSize(){
+    public void setSize(int size){
         this.size = size;
     }
     
