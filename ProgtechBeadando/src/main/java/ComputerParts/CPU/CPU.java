@@ -1,4 +1,4 @@
-package ComputerParts;
+package ComputerParts.CPU;
 
 /**
  *
