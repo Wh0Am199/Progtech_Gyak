@@ -1,4 +1,5 @@
 
+import Decorator.Computer;
 import java.util.ArrayList;
 
 public class ShoppingBasket { 
@@ -9,13 +10,23 @@ public class ShoppingBasket {
     
     private ShoppingBasket() { }
     
+    public void Add(Computer pc){
+        computers.add(pc);
+    }
+    
+    public void Delete(Computer pc){
+        computers.remove(pc);
+    }
+    
+    
+    //Singleton
     public static ShoppingBasket getInstance()
     {
-    if (uniqueInstance==null) 
-    {
-    uniqueInstance = new ShoppingBasket(); 
-    }
+        if (uniqueInstance==null) 
+        {
+        uniqueInstance = new ShoppingBasket(); 
+        }
 
-    return uniqueInstance;
+        return uniqueInstance;
     }
-}
+}   
