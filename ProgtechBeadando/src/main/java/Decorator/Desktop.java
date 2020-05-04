@@ -1,6 +1,7 @@
 package Decorator;
 
 import ComputerParts.CPU.CPU;
+import ComputerParts.GPU.GPU;
 import ComputerParts.Motherboard.DesktopMotherboard;
 import ComputerParts.RAM.RAM;
 import ComputerParts.Screen.Screen;
@@ -15,6 +16,7 @@ import Exceptions.InvalidPSUException;
 public class Desktop extends Computer{
 
     private CPU cpu;
+    private GPU gpu;
     private DesktopMotherboard motherboard;
     private PSU psu;
     private RAM ram;
@@ -23,9 +25,10 @@ public class Desktop extends Computer{
     
     public Computer desktop = new Computer();
     
-    public Desktop(CPU cpu, DesktopMotherboard motherboard, PSU psu, RAM ram, Screen screen, ComputerCase pcCase) throws InvalidPSUException, InvalidMotherboardException {
+    public Desktop(CPU cpu, GPU gpu, DesktopMotherboard motherboard, PSU psu, RAM ram, Screen screen, ComputerCase pcCase) throws InvalidPSUException, InvalidMotherboardException {
         super(pcCase);
         this.cpu = cpu;
+        this.gpu = gpu;
         this.motherboard = motherboard;
         this.psu = psu;
         this.ram = ram;
@@ -42,7 +45,7 @@ public class Desktop extends Computer{
     
     @Override
     public String Build() {
-        return "PC parts: CPU - " + this.cpu.getCores() + " Motherboard - " + this.motherboard.getMotherBoardSize() + " PSU - " + this.psu.getPower() + " RAM - " + this.ram.getSize() + " GB " + " Screen - " + this.screen.getResolution() + " Computer Case - " + this.pcCase;
+        return "PC parts: CPU - " + this.cpu.getCores() + " GPU - " + this.gpu.getGpuType() + " Motherboard - " + this.motherboard.getMotherBoardSize() + " PSU - " + this.psu.getPower() + " RAM - " + this.ram.getSize() + " GB " + " Screen - " + this.screen.getResolution() + " Computer Case - " + this.pcCase;
     }
     
     
