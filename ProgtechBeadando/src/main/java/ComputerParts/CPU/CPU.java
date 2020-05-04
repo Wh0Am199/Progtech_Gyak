@@ -31,4 +31,12 @@ public class CPU {
         this.cpuSocket=cpuSocket;
     }
     
+    public CPU DeepCopy(){
+        CPU cpu = new CPU(getCores(),getCpuSocket());
+        cpu.setCores(getCores());
+        cpu.setCpuSocket(getCpuSocket());
+        return cpu;
+    }
+    
+    
 }
