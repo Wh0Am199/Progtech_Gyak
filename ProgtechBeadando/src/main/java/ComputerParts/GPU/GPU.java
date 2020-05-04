@@ -26,9 +26,20 @@ public class GPU {
     }
     
     
-    public GPU(GpuType gpuType, int VRam){
+    private int requiredPower;
+    
+    public int getRequiredPower(){
+        return requiredPower;
+    }
+    public void setRequiredPower(int requiredPower){
+        this.requiredPower = requiredPower;
+    }
+    
+    
+    public GPU(GpuType gpuType, int VRam, int requiredPower){
         this.gpuType = gpuType;
         this.VRam = VRam;
+        this.requiredPower = requiredPower;
     }
     
 }
