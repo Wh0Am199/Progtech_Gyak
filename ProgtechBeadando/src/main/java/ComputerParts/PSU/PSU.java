@@ -1,4 +1,6 @@
-package PSU;
+package ComputerParts.PSU;
+
+import PSU.PsuType;
 
 /**
  *
@@ -22,6 +24,11 @@ public class PSU {
         return power;
     }
     public void setPower(int power){
+        this.power = power;
+    }
+    
+    public PSU(PsuType psuType, int power){
+        this.psuType = psuType;
         this.power = power;
     }
 }

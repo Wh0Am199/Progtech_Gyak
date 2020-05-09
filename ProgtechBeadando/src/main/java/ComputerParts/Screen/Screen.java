@@ -25,4 +25,9 @@ public class Screen {
         this.resolution = resolution;
     }
     
+    public Screen(AspectRatio aspectRatio, Resolution resolution){
+        this.aspectRatio = aspectRatio;
+        this.resolution = resolution;
+    }
+    
 }
