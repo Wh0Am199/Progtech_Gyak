@@ -6,16 +6,6 @@ package ComputerParts.Motherboard;
  */
 public class LaptopMotherboard extends MotherboardStrategy {
 
-    private MotherboardSize mbsize;
-    
-    public MotherboardSize getMotherBoardSize(){
-        return mbsize;
-    }
-    public void setMotherBoardSize(MotherboardSize mbsize){
-        this.mbsize = mbsize;
-    }
-    
-    
     private MotherboardType mbtype;
     
     public MotherboardType getMotherBoardType(){
@@ -28,12 +18,11 @@ public class LaptopMotherboard extends MotherboardStrategy {
 
     @Override
     public String BuildMotherboard() {
-        return "Motherboard: Size - " + this.mbsize + " Type - " + this.mbtype;
+        return "Motherboard: Type - " + this.mbtype;
     }
     
-    public LaptopMotherboard(MotherboardSize mbsize, MotherboardType mbtype){
-        this.mbsize = mbsize;
-        this.mbtype = mbtype.Laptop;
+    public LaptopMotherboard(){
+        this.mbtype = MotherboardType.Laptop;
     }
     
 }
