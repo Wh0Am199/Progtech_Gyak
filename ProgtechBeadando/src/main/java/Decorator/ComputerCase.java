@@ -8,5 +8,6 @@ public enum ComputerCase {
     Mini_ITX,
     microATX,
     ATX,
-    EATX
+    EATX,
+    Laptop
 }
