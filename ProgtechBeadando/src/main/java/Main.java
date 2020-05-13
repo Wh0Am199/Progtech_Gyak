@@ -18,6 +18,7 @@ import Decorator.Laptop;
 import Exceptions.InvalidCaseException;
 import Exceptions.InvalidMotherboardException;
 import Exceptions.InvalidPSUException;
+import Exceptions.TooPowerfulGPUException;
 import PSU.PsuType;
 
 /**
@@ -59,6 +60,8 @@ public class Main {
             emb.printStackTrace();
         } catch (InvalidCaseException ic){
             ic.printStackTrace();
+        } catch (TooPowerfulGPUException exgpu){
+            exgpu.printStackTrace();
         } catch (Exception ex){
             ex.printStackTrace();
         }
