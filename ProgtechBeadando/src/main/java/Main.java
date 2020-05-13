@@ -39,7 +39,7 @@ public class Main {
             Screen screen = new Screen(AspectRatio._16_9, Resolution.FULL_HD);
 
             Laptop laptop = new Laptop(cpu,gpu,mb,psu,ram,screen,ComputerCase.Laptop);
-            laptop.Build();
+            System.out.println(laptop.Build());
             basket.Add(laptop);
 
 
@@ -51,7 +51,7 @@ public class Main {
             Screen screen2 = new Screen(AspectRatio._21_9, Resolution.QHD);
 
             Desktop desktop = new Desktop(cpu2,gpu2,mb2,psu2,ram2,screen2,ComputerCase.ATX);
-            desktop.Build();
+            System.out.println(desktop.Build());
             basket.Add(desktop);
         } catch (InvalidPSUException e){
             e.printStackTrace();

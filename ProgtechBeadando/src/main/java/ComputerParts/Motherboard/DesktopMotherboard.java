@@ -31,9 +31,9 @@ public class DesktopMotherboard extends MotherboardStrategy{
         return "Motherboard: Size - " + this.mbsize + " Type - " + this.mbtype;
     }
     
-    public DesktopMotherboard(MotherboardSize mbsize, MotherboardType mbtype){
+    public DesktopMotherboard(MotherboardSize mbsize){
         this.mbsize = mbsize;
-        this.mbtype = mbtype.Desktop;
+        this.mbtype = MotherboardType.Desktop;
     }
     
     
