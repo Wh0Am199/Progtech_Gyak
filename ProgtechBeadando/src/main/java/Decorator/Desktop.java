@@ -8,6 +8,7 @@ import ComputerParts.Screen.Screen;
 import ComputerParts.PSU.PSU;
 import Exceptions.InvalidMotherboardException;
 import Exceptions.InvalidPSUException;
+import Exceptions.TooPowerfulGPUException;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Desktop extends Computer{
     
     public Computer desktop = new Computer();
     
-    public Desktop(CPU cpu, GPU gpu, DesktopMotherboard motherboard, PSU psu, RAM ram, Screen screen, ComputerCase pcCase) throws InvalidPSUException, InvalidMotherboardException {
+    public Desktop(CPU cpu, GPU gpu, DesktopMotherboard motherboard, PSU psu, RAM ram, Screen screen, ComputerCase pcCase) throws InvalidPSUException, InvalidMotherboardException, TooPowerfulGPUException {
         super(pcCase);
         this.cpu = cpu;
         this.gpu = gpu;
@@ -39,6 +40,9 @@ public class Desktop extends Computer{
         }
         if (this.motherboard.getMotherBoardType().Desktop != motherboard.getMotherBoardType()) {
             throw new InvalidMotherboardException("This motherboard is not compatible with a desktop! This is a laptop Motherboard!");
+        }
+        if (this.gpu.getRequiredPower() > psu.getPower()){
+            throw new TooPowerfulGPUException("This GPU requires a more powerful PSU!");
         }
     }
     
