@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: ComputerParts.CPU.CPUTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec <<< FAILURE!
+ComputerParts.CPU.CPUTest.testDeepCopy()  Time elapsed: 0.034 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <ComputerParts.CPU.CPU@2b98378d> but was: <ComputerParts.CPU.CPU@475530b9>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
+	at ComputerParts.CPU.CPUTest.testDeepCopy(CPUTest.java:111)
+
