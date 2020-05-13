@@ -10,7 +10,6 @@ import ComputerParts.CPU.CpuSocket;
 import ComputerParts.GPU.GPU;
 import ComputerParts.GPU.GpuType;
 import ComputerParts.Motherboard.DesktopMotherboard;
-import ComputerParts.Motherboard.LaptopMotherboard;
 import ComputerParts.Motherboard.MotherboardSize;
 import ComputerParts.PSU.PSU;
 import ComputerParts.RAM.RAM;
@@ -59,14 +58,14 @@ public class DesktopTest {
         CPU cpu = new CPU(8,CpuSocket.Socket_1366);
         GPU gpu = new GPU(GpuType.AMD,6,800);
         DesktopMotherboard mb = new DesktopMotherboard(MotherboardSize.ATX);
-        PSU psu = new PSU(PsuType.Desktop_PSU, 750);
+        PSU psu = new PSU(PsuType.Desktop_PSU, 1000);
         RAM ram = new RAM(RamType.DDR3,16);
         Screen screen = new Screen(AspectRatio._21_9, Resolution.QHD);
         
         System.out.println("Build");
         try {
             Desktop instance = new Desktop(cpu,gpu,mb,psu,ram,screen,ComputerCase.ATX);
-            String expResult = "PC parts: CPU - 8 GPU - AMD Motherboard - ATX PSU - 750 RAM - 16 GB  Screen - QHD Computer Case - null";
+            String expResult = "PC parts: CPU - 8 GPU - AMD Motherboard - ATX PSU - 1000 RAM - 16 GB  Screen - QHD Computer Case - null";
             String result = instance.Build();
             assertEquals(expResult, result);
         } catch (Exception e){
